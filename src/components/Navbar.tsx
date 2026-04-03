@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 
 const navLinks = [
-  { label: "Home", href: "#" },
-  { label: "Menu", href: "#menu" },
+  { label: "Services", href: "#services" },
+  { label: "Why Rocky", href: "#why-us" },
+  { label: "Reviews", href: "#reviews" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];
@@ -26,33 +27,30 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16 md:h-20">
-        <a href="#" className="font-display text-2xl text-foreground">
-          <span className="text-gradient-gold">Umi</span> Sushi
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
+        <a href="#" className="font-display text-xl md:text-2xl font-bold text-foreground">
+          Services by <span className="text-primary">Rocky</span>
         </a>
 
-        {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="font-body text-sm text-muted-foreground hover:text-primary transition-colors duration-300 tracking-wide"
+              className="font-body text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
             >
               {link.label}
             </a>
           ))}
           <a
-            href="https://www.umisushicalifornia.com/xnyupkq5/umi-sushi-el-dorado-hills-95762/order-online"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-5 py-2 bg-primary text-primary-foreground rounded-sm font-body text-sm font-semibold hover:opacity-90 transition-all"
+            href="tel:9163368577"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-secondary text-secondary-foreground rounded-lg font-display font-bold text-sm hover:opacity-90 transition-all"
           >
-            Order Online
+            <Phone className="w-4 h-4" />
+            916-336-8577
           </a>
         </div>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden text-foreground"
@@ -62,7 +60,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden bg-background/98 backdrop-blur-md border-b border-border">
           <div className="px-4 py-6 flex flex-col gap-4">
@@ -77,12 +74,11 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="https://www.umisushicalifornia.com/xnyupkq5/umi-sushi-el-dorado-hills-95762/order-online"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-5 py-3 bg-primary text-primary-foreground rounded-sm font-body font-semibold text-center hover:opacity-90 transition-all"
+              href="tel:9163368577"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-secondary text-secondary-foreground rounded-lg font-display font-bold text-center hover:opacity-90 transition-all"
             >
-              Order Online
+              <Phone className="w-4 h-4" />
+              916-336-8577
             </a>
           </div>
         </div>
