@@ -1,61 +1,51 @@
-import chefImage from "@/assets/chef-craft.jpg";
-import interiorImage from "@/assets/restaurant-interior.jpg";
+import aboutImage from "@/assets/about-rocky.jpg";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 px-4 bg-secondary">
-      <div className="max-w-6xl mx-auto">
+    <section id="about" className="py-20 md:py-28 bg-accent">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <p className="text-primary font-body tracking-[0.3em] uppercase text-sm mb-3">Our Story</p>
-            <h2 className="font-display text-4xl md:text-5xl text-foreground mb-6">
-              Passion in Every Piece
+          <div className="order-2 lg:order-1">
+            <span className="inline-block text-sm font-body font-semibold tracking-widest uppercase text-primary mb-3">
+              About Rocky
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+              Professional Background, Hands-On Results
             </h2>
-            <div className="w-16 h-px bg-primary mb-8" />
-            <p className="text-foreground/70 font-body leading-relaxed mb-6">
-              Nestled in the heart of El Dorado Hills, Umi Sushi has become a beloved destination 
-              for sushi enthusiasts. Our chefs bring decades of expertise and a deep passion for 
-              Japanese culinary arts to every dish we serve.
+            <p className="text-muted-foreground font-body leading-relaxed mb-6">
+              Anthony "Rocky" brings a unique combination of corporate engineering experience 
+              and hands-on craftsmanship to every project. With a background at IBM and years 
+              as a maintenance supervisor, he understands both the technical precision and 
+              practical know-how needed to get the job done right.
             </p>
-            <p className="text-foreground/70 font-body leading-relaxed mb-8">
-              We source only the freshest fish and finest ingredients, combining traditional 
-              techniques with creative flair. From our signature Lobster Roll to our 
-              Perfect Rainbow Roll, every creation is crafted with care and precision.
+            <p className="text-muted-foreground font-body leading-relaxed mb-8">
+              Based in the Folsom and El Dorado Hills area, Services by Rocky is your 
+              locally owned and operated solution for appliance installation, electrical work, 
+              plumbing, TV mounting, and general handyman services. Every job is treated with 
+              the same care and attention as if it were in his own home.
             </p>
             <div className="grid grid-cols-3 gap-8">
               <div>
-                <p className="font-display text-3xl text-primary">50+</p>
-                <p className="text-muted-foreground font-body text-sm">Specialty Rolls</p>
+                <p className="font-display text-3xl font-bold text-primary">5★</p>
+                <p className="text-muted-foreground font-body text-sm">Customer Rating</p>
               </div>
               <div>
-                <p className="font-display text-3xl text-primary">4.0★</p>
-                <p className="text-muted-foreground font-body text-sm">Guest Rating</p>
+                <p className="font-display text-3xl font-bold text-primary">100%</p>
+                <p className="text-muted-foreground font-body text-sm">Satisfaction</p>
               </div>
               <div>
-                <p className="font-display text-3xl text-primary">Daily</p>
-                <p className="text-muted-foreground font-body text-sm">Fresh Fish</p>
+                <p className="font-display text-3xl font-bold text-primary">Local</p>
+                <p className="text-muted-foreground font-body text-sm">Owned & Operated</p>
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="rounded-sm overflow-hidden aspect-[3/4]">
+          <div className="order-1 lg:order-2">
+            <div className="rounded-xl overflow-hidden shadow-2xl">
               <img
-                src={chefImage}
-                alt="Sushi chef crafting nigiri"
+                src={aboutImage}
+                alt="Anthony Rocky - professional handyman services"
                 loading="lazy"
-                width={800}
-                height={800}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="rounded-sm overflow-hidden aspect-[3/4] mt-8">
-              <img
-                src={interiorImage}
-                alt="Umi Sushi restaurant interior"
-                loading="lazy"
-                width={1280}
-                height={720}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover aspect-[4/3]"
               />
             </div>
           </div>
