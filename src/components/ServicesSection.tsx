@@ -1,35 +1,47 @@
 import { Wrench, Zap, Hammer, Home, Truck, Droplets } from "lucide-react";
+import applianceImg from "@/assets/service-appliance.jpg";
+import electricalImg from "@/assets/service-electrical.jpg";
+import carpentryImg from "@/assets/service-carpentry.jpg";
+import plumbingImg from "@/assets/service-plumbing.jpg";
+import homeRepairImg from "@/assets/service-homerepair.jpg";
+import gutterImg from "@/assets/service-gutter.jpg";
 
 const services = [
   {
     icon: Wrench,
     title: "Appliance Installation",
     description: "Dishwashers, range hoods, garbage disposals, microwaves, and more. Clean installs with proper connections every time.",
+    image: applianceImg,
   },
   {
     icon: Zap,
     title: "Electrical",
     description: "Light fixtures, ceiling fans, outlets, switches, and smart home devices. Safe, code-compliant work.",
+    image: electricalImg,
   },
   {
     icon: Hammer,
     title: "Carpentry",
     description: "Shelving, trim, door repairs, cabinet fixes, and custom woodwork. Precision craftsmanship for every project.",
-  },
-  {
-    icon: Home,
-    title: "Home Repairs & Fixes",
-    description: "Drywall patching, weather stripping, caulking, painting touch-ups, and all those nagging to-do list items.",
-  },
-  {
-    icon: Truck,
-    title: "Move-In & Rental Prep",
-    description: "TV mounting, furniture assembly, lock changes, deep cleaning prep, and everything to get your space ready.",
+    image: carpentryImg,
   },
   {
     icon: Droplets,
     title: "Plumbing",
     description: "Faucet replacements, toilet repairs, garbage disposal installs, leak fixes, and basic plumbing needs.",
+    image: plumbingImg,
+  },
+  {
+    icon: Home,
+    title: "Home Repairs & Fixes",
+    description: "Drywall patching, weather stripping, caulking, painting touch-ups, and all those nagging to-do list items.",
+    image: homeRepairImg,
+  },
+  {
+    icon: Truck,
+    title: "Gutters & Exterior",
+    description: "Gutter cleaning, repairs, exterior maintenance, and everything to keep your home's exterior in top shape.",
+    image: gutterImg,
   },
 ];
 
@@ -42,7 +54,7 @@ const ServicesSection = () => {
             What We Do
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Services You Can Count On
+            Our Services
           </h2>
           <p className="font-body text-muted-foreground text-lg">
             From quick fixes to full installations, we handle it all with clean work and honest pricing.
@@ -50,20 +62,32 @@ const ServicesSection = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((s, i) => (
+          {services.map((s) => (
             <div
               key={s.title}
-              className="group relative bg-card rounded-xl border border-border p-8 hover:shadow-xl hover:border-primary/30 transition-all duration-300 hover:-translate-y-1"
+              className="group relative bg-card rounded-xl border border-border overflow-hidden hover:shadow-xl hover:border-primary/30 transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
-                <s.icon className="w-7 h-7 text-primary" />
+              <div className="aspect-[4/3] overflow-hidden">
+                <img
+                  src={s.image}
+                  alt={`${s.title} - Services by Rocky`}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
-              <h3 className="font-display text-xl font-bold text-foreground mb-3">
-                {s.title}
-              </h3>
-              <p className="font-body text-muted-foreground leading-relaxed">
-                {s.description}
-              </p>
+              <div className="p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <s.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <h3 className="font-display text-lg font-bold text-foreground">
+                    {s.title}
+                  </h3>
+                </div>
+                <p className="font-body text-muted-foreground text-sm leading-relaxed">
+                  {s.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>

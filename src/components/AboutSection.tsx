@@ -1,4 +1,4 @@
-import aboutImage from "@/assets/about-rocky.jpg";
+import aboutImage from "@/assets/service-electrical.jpg";
 
 const AboutSection = () => {
   return (
@@ -10,19 +10,25 @@ const AboutSection = () => {
               About Rocky
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Professional Background, Hands-On Results
+              Locally Owned. Professionally Driven.
             </h2>
             <p className="text-muted-foreground font-body leading-relaxed mb-6">
-              Anthony "Rocky" brings a unique combination of corporate engineering experience 
-              and hands-on craftsmanship to every project. With a background at IBM and years 
-              as a maintenance supervisor, he understands both the technical precision and 
-              practical know-how needed to get the job done right.
+              My name is Anthony, and I started Services by Rocky at the beginning of the 
+              COVID-19 pandemic. I bring a unique mix of hands-on experience and professional 
+              background, including roles as a systems engineer with IBM, a manager at an 
+              appliance parts store, a project manager for a fencing company, and a maintenance 
+              supervisor overseeing more than 80 salon suites.
             </p>
-            <p className="text-muted-foreground font-body leading-relaxed mb-8">
-              Based in the Folsom and El Dorado Hills area, Services by Rocky is your 
-              locally owned and operated solution for appliance installation, electrical work, 
-              plumbing, TV mounting, and general handyman services. Every job is treated with 
-              the same care and attention as if it were in his own home.
+            <p className="text-muted-foreground font-body leading-relaxed mb-6">
+              This diverse experience allows me to approach every job with problem-solving, 
+              precision, and a commitment to doing things right the first time.
+            </p>
+            <p className="text-foreground font-body font-semibold leading-relaxed mb-8">
+              With Services by Rocky, you can expect reliable service, honest work, and 
+              attention to detail — every time.
+            </p>
+            <p className="text-muted-foreground font-body italic mb-8">
+              A reliable hand in making your house a home.
             </p>
             <div className="grid grid-cols-3 gap-8">
               <div>
@@ -43,7 +49,7 @@ const AboutSection = () => {
             <div className="rounded-xl overflow-hidden shadow-2xl">
               <img
                 src={aboutImage}
-                alt="Anthony Rocky - professional handyman services"
+                alt="Anthony Rocky - professional handyman services, electrical work"
                 loading="lazy"
                 className="w-full h-full object-cover aspect-[4/3]"
               />
