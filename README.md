@@ -1,3 +1,8 @@
-# Welcome to your Lovable project
+Client: Garrido, A
+Site Construction Name: servicesbyrocky.com
+Domain: External Domain
+DNS Status: Incomplete
+DNS Configuration: Incomplete
+Netlify DNS Transfer: Incomplete
 
-TODO: Document your project here
+Provider: Aarav N
